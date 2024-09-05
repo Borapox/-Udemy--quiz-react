@@ -29,6 +29,31 @@ const data = [
         options: ["div", "main", "section", "footer"],
         answer: "footer",
       },
+      {
+        question: "Qual tag HTML é usada para adicionar uma imagem?",
+        options: ["<img>", "<image>", "<pic>", "<src>"],
+        answer: "<img>",
+      },
+      {
+        question: "Qual elemento HTML é usado para títulos de nível mais alto?",
+        options: ["<h1>", "<header>", "<title>", "<h6>"],
+        answer: "<h1>",
+      },
+      {
+        question: "Qual atributo HTML é usado para definir o valor inicial de um input?",
+        options: ["value", "placeholder", "type", "name"],
+        answer: "value",
+      },
+      {
+        question: "Qual tag HTML é usada para criar uma tabela?",
+        options: ["<table>", "<tab>", "<grid>", "<tabela>"],
+        answer: "<table>",
+      },
+      {
+        question: "Qual tag HTML é usada para criar um formulário?",
+        options: ["<form>", "<input>", "<submit>", "<fieldset>"],
+        answer: "<form>",
+      },
     ],
   },
   {
@@ -49,6 +74,41 @@ const data = [
         question: "A posição que deixa um elemento fixo é a:",
         options: ["static", "absolute", "fixed", "relative"],
         answer: "fixed",
+      },
+      {
+        question: "Qual unidade de medida é relativa ao tamanho da fonte do elemento pai?",
+        options: ["px", "em", "rem", "%"],
+        answer: "em",
+      },
+      {
+        question: "Qual propriedade CSS é usada para definir o espaçamento interno de um elemento?",
+        options: ["margin", "padding", "border", "outline"],
+        answer: "padding",
+      },
+      {
+        question: "Como se chama a técnica para aplicar várias fontes?",
+        options: ["font-stack", "font-group", "multi-font", "font-family"],
+        answer: "font-stack",
+      },
+      {
+        question: "Qual propriedade define o espaçamento entre as bordas de um elemento?",
+        options: ["padding", "margin", "border-spacing", "space"],
+        answer: "margin",
+      },
+      {
+        question: "Qual é o valor padrão da propriedade 'position' em CSS?",
+        options: ["relative", "absolute", "static", "fixed"],
+        answer: "static",
+      },
+      {
+        question: "Qual propriedade é usada para alterar o tipo de cursor do mouse?",
+        options: ["pointer-events", "cursor", "hover", "mouse"],
+        answer: "cursor",
+      },
+      {
+        question: "Qual regra CSS é usada para aplicar estilos em dispositivos móveis?",
+        options: ["@media", "@mobile", "@device", "@screen"],
+        answer: "@media",
       },
     ],
   },
@@ -85,6 +145,31 @@ const data = [
           "Qual destas propriedades da a quantidade de elementos de um array?",
         options: ["qty", "length", "items", "index"],
         answer: "length",
+      },
+      {
+        question: "Qual método é usado para adicionar um item ao final de um array?",
+        options: ["push", "pop", "shift", "unshift"],
+        answer: "push",
+      },
+      {
+        question: "Qual método converte uma string em um número?",
+        options: ["parseInt", "toString", "concat", "toFixed"],
+        answer: "parseInt",
+      },
+      {
+        question: "Qual operador é usado para comparar valores e tipos?",
+        options: ["==", "===", "=", "!="],
+        answer: "===",
+      },
+      {
+        question: "Como podemos criar uma função anônima?",
+        options: ["function() {}", "anonymous() {}", "() => {}", "none of the above"],
+        answer: "() => {}",
+      },
+      {
+        question: "Qual método é usado para filtrar elementos de um array?",
+        options: ["map", "filter", "reduce", "forEach"],
+        answer: "filter",
       },
     ],
   },
