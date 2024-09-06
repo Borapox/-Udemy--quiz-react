@@ -1,12 +1,13 @@
 import { useContext } from "react";
 import { QuizContext } from "../context/Quiz";
+import  Option  from "../components/Option"
 
 const Question = () => {
     const [quizState, dispatch] = useContext(QuizContext);
     const currentQuestion = quizState.questions[quizState.currentQuestion];
 
     return (
-        <div className="flex flex-col items-center justify-center p-6 bg-white rounded-lg shadow-lg max-w-xl mx-auto">
+        <div className="flex flex-col items-center justify-center p-6 bg-white rounded-lg shadow-lg w-[900px] mx-auto">
             <p className="text-sm text-gray-600 mb-4">
                 Pergunta {quizState.currentQuestion + 1} de {quizState.questions.length}
             </p>
@@ -15,7 +16,9 @@ const Question = () => {
             </h2>
 
             <div className="flex flex-col space-y-3 mb-6">
-                <p className="text-lg font-semibold">Opções:</p>
+                {currentQuestion.options.map((option) => (
+                    <Option option={option} key={option}></Option>
+                ))}
             </div>
 
             <button 
