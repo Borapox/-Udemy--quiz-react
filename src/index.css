@@ -9,3 +9,11 @@
     font-optical-sizing: auto;
     font-style: normal;
 }
+
+.correct {
+    background-color: rgb(156, 247, 10);
+}
+.wrong {
+    background-color: rgba(252, 10, 10, 0.699);
+    border-color: red;
+}
