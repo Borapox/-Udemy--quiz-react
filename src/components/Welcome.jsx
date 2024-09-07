@@ -1,33 +1,35 @@
-import { useContext } from "react"; // Importa o hook useContext para acessar o contexto
-import { QuizContext } from "../context/Quiz"; // Importa o contexto do Quiz para acessar o estado global
-
-import Quiz from "../img/quiz.svg"; // Importa uma imagem que será exibida no componente
-import React from 'react'; // Importa o React para criar o componente
+import { useContext } from "react";
+import { QuizContext } from "../context/Quiz";
+import Quiz from "../img/quiz.svg";
 
 const Welcome = () => {
-  // Acessa o estado do quiz e a função de dispatch para atualizar o estado
   const [quizState, dispatch] = useContext(QuizContext);
 
   return (
-    <div className="flex flex-col items-center justify-center p-6 bg-gradient-to-r from-blue-100 via-blue-200 to-blue-300 rounded-lg shadow-lg">
-      {/* Exibe o título do quiz */}
-      <h2 className="text-3xl font-bold text-purple-600 mb-4">Quiz de Programação</h2>
-      
-      {/* Exibe uma mensagem informando o usuário para clicar no botão abaixo */}
-      <p className="text-lg text-gray-700 mb-6">Clique no botão abaixo para iniciar</p>
-      
-      {/* Botão para iniciar o quiz */}
-      <button 
-        className="px-6 py-3 bg-cyan-400 text-white font-semibold rounded-lg shadow-lg hover:bg-cyan-500 transition duration-300" 
-        onClick={() => dispatch({ type: "CHANGE_STAGE" })} // Dispara a ação para mudar o estágio do quiz
+    <div className="bg-white p-6 rounded-lg shadow-lg max-w-md mx-auto text-center">
+      {/* Título de boas-vindas */}
+      <h2 className="text-2xl font-bold text-teal-800 mb-4">
+        Seja bem-vindo
+      </h2>
+      {/* Mensagem de introdução */}
+      <p className="text-lg text-gray-700 mb-6">
+        Clique no botão abaixo para começar:
+      </p>
+      {/* Botão de iniciar */}
+      <button
+        onClick={() => dispatch({ type: "CHANGE_STAGE" })}
+        className="bg-teal-600 text-white py-2 px-4 rounded-lg shadow hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500"
       >
         Iniciar
       </button>
-     
-      {/* Exibe a imagem importada que ilustra o início do quiz */}
-      <img src={Quiz} alt="Início do Quiz" className="mt-6 w-64 h-auto" />
+      {/* Imagem do quiz */}
+      <img
+        src={Quiz}
+        alt="Início do Quiz"
+        className="w-24 h-24 mx-auto mt-6"
+      />
     </div>
   );
-}
+};
 
 export default Welcome;

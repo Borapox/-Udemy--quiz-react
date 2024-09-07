@@ -1,32 +1,34 @@
-import { React, useContext } from 'react'; // Importa o React e o hook useContext para utilizar o contexto
-
-import Welldone from '../img/welldone.svg'; // Importa uma imagem que será exibida no componente
-import { QuizContext } from '../context/Quiz'; // Importa o contexto do Quiz para acessar o estado global
+import { useContext } from "react";
+import { QuizContext } from "../context/Quiz";
+import WellDone from "../img/welldone.svg";
 
 const GameOver = () => {
-  // Acessa o estado do quiz e a função de dispatch para atualizar o estado
   const [quizState, dispatch] = useContext(QuizContext);
 
   return (
-    <div className="flex flex-col items-center justify-center p-6 bg-gradient-to-r from-blue-100 via-blue-200 to-blue-300 rounded-lg shadow-lg">
-      {/* Exibe o título "Fim de Jogo" */}
-      <h2 className="text-3xl font-bold text-purple-600 mb-4">Fim de Jogo</h2>
-      
-      {/* Exibe a pontuação do jogador */}
-      <p className="text-lg text-gray-700 mb-2">Pontuação : {quizState.score}</p>
-      
-      {/* Exibe o número de respostas corretas em relação ao total de perguntas */}
-      <p className="text-lg text-gray-700 mb-6">
-        Você acertou {quizState.score} de {quizState.questions.length} perguntas
+    <div className="bg-white p-6 rounded-lg shadow-lg max-w-md mx-auto text-center">
+      {/* Título do fim de jogo com estilo */}
+      <h2 className="text-2xl font-bold text-teal-800 mb-4">
+        Fim de jogo!
+      </h2>
+      {/* Pontuação com estilo */}
+      <p className="text-lg text-gray-700 mb-2">
+        Pontuação: <span className="font-bold text-teal-600">{quizState.score}</span>
       </p>
-
-      {/* Exibe a imagem importada anteriormente */}
-      <img src={Welldone} alt="Fim do Quiz!" className="w-64 h-auto mb-6" />
-
-      {/* Botão para reiniciar o jogo, que dispara uma ação para começar um novo jogo */}
+      {/* Número de perguntas respondidas com estilo */}
+      <p className="text-lg text-gray-700 mb-4">
+        Você acertou {quizState.score} de {quizState.questions.length} perguntas.
+      </p>
+      {/* Imagem de fim de jogo */}
+      <img 
+        src={WellDone} 
+        alt="Fim do Quiz" 
+        className="w-24 h-24 mx-auto mb-4"
+      />
+      {/* Botão para reiniciar o jogo */}
       <button 
-        className="px-6 py-3 bg-cyan-400 text-white font-semibold rounded-lg shadow-lg hover:bg-cyan-500 transition duration-300"
-        onClick={() => dispatch({type: "NEW_GAME"})}
+        onClick={() => dispatch({ type: "NEW_GAME" })}
+        className="bg-teal-600 text-white py-2 px-4 rounded-lg shadow hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500"
       >
         Reiniciar
       </button>
